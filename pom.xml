@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.eugene.spring.springboot</groupId>
-    <artifactId>ShiftLab</artifactId>
+    <artifactId>shift-lab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ShiftLab</name>
     <description>ShiftLab</description>
@@ -45,6 +45,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>annotationProcessor</scope>
         </dependency>
     </dependencies>
 

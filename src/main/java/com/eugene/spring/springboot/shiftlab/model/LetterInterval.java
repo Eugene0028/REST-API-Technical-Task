@@ -1,10 +1,16 @@
 package com.eugene.spring.springboot.shiftlab.model;
-
-
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "LETTERINTERVALS")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class LetterInterval
 {
     @Id
@@ -16,45 +22,4 @@ public class LetterInterval
 
     @Column(name = "_end")
     private String end;
-
-    public LetterInterval() {
-    }
-
-    public LetterInterval(String start, String end) {
-        this.start = start;
-        this.end = end;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
-    public void setStart(String start) {
-        this.start = start;
-    }
-
-    public String getEnd() {
-        return end;
-    }
-
-    public void setEnd(String end) {
-        this.end = end;
-    }
-
-    @Override
-    public String toString() {
-        return "LetterInterval{" +
-                "id=" + id +
-                ", start='" + start + '\'' +
-                ", end='" + end + '\'' +
-                '}';
-    }
 }

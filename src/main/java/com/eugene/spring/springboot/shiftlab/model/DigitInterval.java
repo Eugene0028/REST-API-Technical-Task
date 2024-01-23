@@ -1,12 +1,19 @@
 package com.eugene.spring.springboot.shiftlab.model;
-
 import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "DIGITINTERVALS")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class DigitInterval
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,37 +23,8 @@ public class DigitInterval
 
     @Column(name = "_end")
     private Long end;
-
-    public DigitInterval() {
-    }
-
     public DigitInterval(Long start, Long end) {
         this.start = start;
-        this.end = end;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setStart(Long start) {
-        this.start = start;
-    }
-
-    public Long getStart() {
-        return start;
-    }
-
-
-    public Long getEnd() {
-        return end;
-    }
-
-    public void setEnd(Long end) {
         this.end = end;
     }
 }

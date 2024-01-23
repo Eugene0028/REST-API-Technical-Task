@@ -10,4 +10,3 @@ CREATE TABLE LetterIntervals (
                            _start long NOT NULL,
                            _end long NOT NULL
 );
-
